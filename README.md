@@ -48,5 +48,5 @@ License
 -------
 
 Released under the MIT license. Feel free to incorporate in any code (please
-retain the single copyright line and link back to this github repo.)
+retain the copyright line and link back to this github repo.)
 
