@@ -21,11 +21,26 @@ task anywhere in your code:
     background.testing = function() {
         console.log("displaying this message every 250ms.");
     }
+    
+You can add more of these tasks in the same way:
 
-Add as many of these background tasks as you like, but keep them short and
-non-blocking or you'll rapidly kill the browser.
+    background.cache_cleaner = function() {
+        if (cache_size > too_big)
+            cache = cache.slice(1000);
+    }
 
-That's all there is to it!
+Here's another contrived example:
+
+    background.timeout = function() {
+        if (user.login_time < now)
+            app.logout();
+    }
+    
+
+It's pretty simple. Add as many of these background tasks as you like. The catch?
+Keep them short and non-blocking or your app will get throttled by the browser.
+
+That's it!
 
 
 
@@ -33,5 +48,5 @@ License
 -------
 
 Released under the MIT license. Feel free to incorporate in any code (please
-retain the copyright line and link back to this github repo.)
+retain the single copyright line and link back to this github repo.)
 
