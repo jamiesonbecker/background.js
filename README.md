@@ -11,6 +11,14 @@ Background processes can be useful for things like cleaning caches, counting
 items, logging a user out after a period of inactivity, etc.  Javascript is the
 only requirement.
 
+If 250ms (1/4 second) is too frequent for you, just change the 250 number in
+the script to something a little bit slower. For example, 1000 would run your functions every 
+1 second. If you do this, you should probably rename the object to background1sec or similar
+so that you can run different ones throughout your code.
+
+Don't use blocking methods; a safety feature of this script is that it won't run the next until
+previous has completed, but your next will never run if the previous doesn't finish.
+
 
 Usage
 -----
