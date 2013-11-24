@@ -16,8 +16,11 @@ the script to something a little bit slower. For example, 1000 would run your fu
 1 second. If you do this, you should probably rename the object to background1sec or similar
 so that you can run different ones throughout your code.
 
-Don't use blocking methods; a safety feature of this script is that it won't run the next until
-previous has completed, but your next will never run if the previous doesn't finish.
+Don't use blocking methods; a safety feature of this script is that it won't run the same task over again until
+previous has completed, so if one hangs, they all hang.
+
+One big feature of this code is that you can add and remove background tasks at any point in your
+script's operation. For example, you can add one after login and then remove it at logout.
 
 
 Usage
